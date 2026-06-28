@@ -36,3 +36,12 @@ track.addEventListener('touchend', e => {
 
 // Auto-play
 setInterval(() => goTo(cur + 1), 5000);
+
+// ── CONVERSÃO GOOGLE ADS — clique WhatsApp ──
+document.querySelectorAll('a[href*="wa.me"]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18277841102/0se-CNLVpcccEM7xxotE'
+    });
+  });
+});
